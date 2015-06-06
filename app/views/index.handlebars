@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>{{title}}</h1>
+			<p>Welcome to {{title}}</p>
+
+			{{#if articles.length}}
+				{{#each articles}}
+					<h2><a href="/{{id}}">{{title}}</a></h2>
+					<div>{{text}}</div>
+				{{/each}}
+			{{else}}
+				<p>
+					No articles to show.
+				</p>
+			{{/if}}
+
+			<p>
+				<a href="/create" class="btn btn-primary">Create New</a>
+			</p>
+		</div>
+	</div>
+</div>
